@@ -30,6 +30,7 @@ link_directories(
 add_library(${PROJECT_NAME} SHARED
   src/gazebo_ros2_control_plugin.cpp
 )
+target_compile_definitions(${PROJECT_NAME} PRIVATE "_USE_MATH_DEFINES")
 ament_target_dependencies(${PROJECT_NAME}
   angles
   controller_manager
@@ -44,6 +45,7 @@ ament_target_dependencies(${PROJECT_NAME}
 add_library(gazebo_hardware_plugins SHARED
   src/gazebo_system.cpp
 )
+target_compile_definitions(gazebo_hardware_plugins PRIVATE "_USE_MATH_DEFINES")
 ament_target_dependencies(gazebo_hardware_plugins
   angles
   gazebo_dev
