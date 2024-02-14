@@ -19,6 +19,10 @@
 #include <vector>
 #include <utility>
 
+#ifdef ERROR
+#undef ERROR
+#endif
+
 #include "gazebo_ros2_control/gazebo_system.hpp"
 #include "gazebo/sensors/ImuSensor.hh"
 #include "gazebo/sensors/ForceTorqueSensor.hh"
